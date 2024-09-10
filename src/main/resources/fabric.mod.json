@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "jesus",
+  "version": "${version}",
+  "name": "Jesus",
+  "description": "",
+  "authors": [
+    "goset33"
+  ],
+  "contact": {
+    "website": "https://www.youtube.com/@goset33",
+    "repo": "https://github.com/goset33/Jesus"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/jesus/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.goset33.jesus.client.JesusClient"
+    ],
+    "main": [
+      "com.goset33.jesus.Jesus"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
