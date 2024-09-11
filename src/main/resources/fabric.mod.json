@@ -9,14 +9,14 @@
   ],
   "contact": {
     "website": "https://www.youtube.com/@goset33",
-    "repo": "https://github.com/goset33/Jesus"
+    "repo": "https://github.com/goset33/Jesus-mod"
   },
   "license": "All-Rights-Reserved",
   "icon": "assets/jesus/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "com.goset33.jesus.client.JesusClient"
+      "com.goset33.jesus.JesusClient"
     ],
     "main": [
       "com.goset33.jesus.Jesus"

@@ -5,7 +5,7 @@ Time: 2024-09-02 18:55:07
 Description: Unexpected error
 
 java.lang.NullPointerException: Cannot invoke "net.minecraft.client.network.ClientPlayerEntity.getBlockPos()" because "player" is null
-	at com.goset33.jesus.EveryTickHandler.onStartTick(EveryTickHandler.java:17)
+	at com.goset33.jesus.event.EveryTickHandler.onStartTick(EveryTickHandler.java:17)
 	at net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.lambda$static$0(ClientTickEvents.java:34)
 	at net.minecraft.client.MinecraftClient.handler$zfc000$fabric-lifecycle-events-v1$onStartTick(MinecraftClient.java:3517)
 	at net.minecraft.client.MinecraftClient.tick(MinecraftClient.java)
@@ -24,7 +24,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Render thread
 Stacktrace:
-	at com.goset33.jesus.EveryTickHandler.onStartTick(EveryTickHandler.java:17)
+	at com.goset33.jesus.event.EveryTickHandler.onStartTick(EveryTickHandler.java:17)
 	at net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.lambda$static$0(ClientTickEvents.java:34)
 	at net.minecraft.client.MinecraftClient.handler$zfc000$fabric-lifecycle-events-v1$onStartTick(MinecraftClient.java:3517)
 

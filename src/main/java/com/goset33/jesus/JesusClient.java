@@ -1,6 +1,5 @@
-package com.goset33.jesus.client;
+package com.goset33.jesus;
 
-import com.goset33.jesus.Jesus;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
@@ -18,7 +17,8 @@ public class JesusClient implements ClientModInitializer {
     public void onInitializeClient() {
         FluidRenderHandlerRegistry.INSTANCE.register(Jesus.STILL_WINE, Jesus.FLOWING_WINE, new SimpleFluidRenderHandler(
                 new Identifier("minecraft:block/water_still"),
-                new Identifier("minecraft:block/water_flow"), 0xB11226));
+                new Identifier("minecraft:block/water_flow"),
+                0xB11226));
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), Jesus.STILL_WINE, Jesus.FLOWING_WINE);
     }
