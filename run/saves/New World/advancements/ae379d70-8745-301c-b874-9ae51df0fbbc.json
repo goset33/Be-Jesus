@@ -1,10 +1,4 @@
 {
-  "minecraft:recipes/transportation/mangrove_boat": {
-    "criteria": {
-      "in_water": "2024-09-11 19:29:57 +0700"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/crafting_table": {
     "criteria": {
       "unlock_right_away": "2024-09-11 19:29:53 +0700"
@@ -14,6 +8,19 @@
   "minecraft:recipes/brewing/cauldron": {
     "criteria": {
       "has_water_bucket": "2024-09-11 19:29:53 +0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:river": "2024-09-11 19:30:05 +0700",
+      "minecraft:forest": "2024-09-11 19:29:54 +0700"
+    },
+    "done": false
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2024-09-11 19:29:57 +0700"
     },
     "done": true
   },
@@ -28,13 +35,6 @@
       "in_water": "2024-09-11 19:29:57 +0700"
     },
     "done": true
-  },
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:river": "2024-09-11 19:30:05 +0700",
-      "minecraft:forest": "2024-09-11 19:29:54 +0700"
-    },
-    "done": false
   },
   "minecraft:recipes/transportation/bamboo_raft": {
     "criteria": {
@@ -69,6 +69,24 @@
   "minecraft:recipes/transportation/dark_oak_boat": {
     "criteria": {
       "in_water": "2024-09-11 19:29:57 +0700"
+    },
+    "done": true
+  },
+  "minecraft:story/lava_bucket": {
+    "criteria": {
+      "lava_bucket": "2024-09-12 22:14:49 +0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2024-09-12 22:14:49 +0700"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2024-09-12 22:14:53 +0700"
     },
     "done": true
   },
