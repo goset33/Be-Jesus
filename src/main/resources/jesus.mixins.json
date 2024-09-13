@@ -4,6 +4,7 @@
   "package": "com.goset33.jesus.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "FishingBobberEntityMixin",
     "GlassBottleItemMixin"
   ],
   "client": [],
