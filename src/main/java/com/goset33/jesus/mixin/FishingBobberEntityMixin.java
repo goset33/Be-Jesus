@@ -9,7 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.LootTables;
 import net.minecraft.loot.context.LootContextParameterSet;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.Mixin;
@@ -55,7 +54,6 @@ public abstract class FishingBobberEntityMixin {
                 lootTable = ((FishingBobberEntity) (Object) this).getWorld().getServer().getLootManager().getLootTable(LootTables.FISHING_GAMEPLAY);
                 ObjectArrayList<ItemStack> list = lootTable.generateLoot(lootContextParameterSet);
                 for (ItemStack itemStack : list) {
-                    itemStack.setCustomName(Text.of("Changed."));
                     containStack = itemStack;
                 }
             }
