@@ -1,4 +1,7 @@
 {
   "item.jesus.wine_bucket": "Ведро вина",
-  "item.jesus.wine_bottle": "Бутылочка вина"
+  "item.jesus.wine_bottle": "Бутылочка вина",
+  "category.jesus.category": "Jesus",
+  "key.jesus.transformation": "Превращение воды",
+  "message.transform_impossible": "У вас в руке должна быть бутылочка воды или ведро воды чтобы сделать это!"
 }

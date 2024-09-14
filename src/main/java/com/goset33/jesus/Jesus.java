@@ -46,5 +46,6 @@ public class Jesus implements ModInitializer {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register((itemGroup) -> itemGroup.add(WINE_BOTTLE));
 
         ClientTickEvents.START_WORLD_TICK.register(new EveryTickHandler());
+        ClientTickEvents.END_CLIENT_TICK.register(new EveryTickHandler());
     }
 }

@@ -1,4 +1,7 @@
 {
   "item.jesus.wine_bucket": "Wine Bucket",
-  "item.jesus.wine_bottle": "Wine Bottle"
+  "item.jesus.wine_bottle": "Wine Bottle",
+  "category.jesus.category": "Jesus Mod",
+  "key.jesus.transformation": "Transform Water",
+  "message.transform_impossible": "You should have a water bottle or water bucket in your hand to do this!"
 }
