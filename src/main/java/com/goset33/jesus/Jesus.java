@@ -1,10 +1,12 @@
 package com.goset33.jesus;
 
 import com.goset33.jesus.event.EveryTickHandler;
+import com.goset33.jesus.event.OnAttackEntity;
 import com.goset33.jesus.fluid.WineFluid;
 import com.goset33.jesus.item.WineBottleItem;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -50,5 +52,6 @@ public class Jesus implements ModInitializer {
 
         ClientTickEvents.START_WORLD_TICK.register(new EveryTickHandler());
         ClientTickEvents.START_CLIENT_TICK.register(new EveryTickHandler());
+        AttackEntityCallback.EVENT.register(new OnAttackEntity());
     }
 }
