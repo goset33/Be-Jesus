@@ -13,12 +13,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.potion.Potions;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
 import net.minecraft.util.math.BlockPos;
 
-public class EveryTickHandler implements ClientTickEvents.StartWorldTick, ClientTickEvents.EndTick {
+import java.util.UUID;
+
+public class EveryTickHandler implements ClientTickEvents.StartWorldTick, ClientTickEvents.StartTick {
     @Override
     public void onStartTick(ClientWorld world) {
         for (PlayerEntity player : world.getPlayers()) {
@@ -37,26 +41,29 @@ public class EveryTickHandler implements ClientTickEvents.StartWorldTick, Client
     }
 
     @Override
-    public void onEndTick(MinecraftClient client) {
+    public void onStartTick(MinecraftClient client) {
         if (JesusClient.transformKey.wasPressed()) {
-            PlayerEntity player = client.player;
-            ItemStack itemStack = player.getMainHandStack();
-            ItemStack newWineStack;
+            TransformWater(client.getServer(), client.player.getUuid());
+        }
+    }
 
-            if (itemStack.getItem() == Items.POTION && PotionUtil.getPotion(itemStack) == Potions.WATER) {
-                newWineStack = new ItemStack(Jesus.WINE_BOTTLE);
-            } else if (itemStack.getItem() == Items.WATER_BUCKET) {
-                newWineStack = new ItemStack(Jesus.WINE_BUCKET); // Items.LAVA_BUCKET Jesus.WINE_BUCKET
-                player.getInventory().removeOne(itemStack);
-            } else {
-                player.sendMessage(Text.translatable("message.transform_impossible").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xFF5555))), false);
-                return;
-            }
+    public void TransformWater(MinecraftServer server, UUID playerId) {
+        ServerPlayerEntity player = server.getPlayerManager().getPlayer(playerId);
+        ItemStack itemStack = player.getMainHandStack();
+        ItemStack newWineStack;
 
-            player.getInventory().insertStack(newWineStack);
-            Jesus.LOGGER.info(itemStack.getItem().toString());
-            Jesus.LOGGER.info(newWineStack.getItem().toString());
-//            player.getInventory().insertStack(newWineStack);
+        if (itemStack.getItem() == Items.POTION && PotionUtil.getPotion(itemStack) == Potions.WATER) {
+            newWineStack = new ItemStack(Jesus.WINE_BOTTLE);
+        } else if (itemStack.getItem() == Items.WATER_BUCKET) {
+            newWineStack = new ItemStack(Jesus.STILL_WINE.getBucketItem());
+        } else {
+            player.sendMessage(Text.translatable("message.transform_impossible").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xFF5555))), false);
+            return;
+        }
+
+        itemStack.decrement(1);
+        if (!player.getInventory().insertStack(newWineStack)) {
+            player.dropStack(newWineStack);
         }
     }
 }

@@ -12,7 +12,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.fluid.FlowableFluid;
-import net.minecraft.item.*;
+import net.minecraft.item.BucketItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -46,6 +49,6 @@ public class Jesus implements ModInitializer {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register((itemGroup) -> itemGroup.add(WINE_BOTTLE));
 
         ClientTickEvents.START_WORLD_TICK.register(new EveryTickHandler());
-        ClientTickEvents.END_CLIENT_TICK.register(new EveryTickHandler());
+        ClientTickEvents.START_CLIENT_TICK.register(new EveryTickHandler());
     }
 }
