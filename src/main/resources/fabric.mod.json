@@ -10,7 +10,7 @@
   "contact": {
     "sources": "https://github.com/goset33/Jesus-mod"
   },
-  "license": "All-Rights-Reserved",
+  "license": "Apache-2.0 license",
   "icon": "assets/jesus/icon.png",
   "environment": "*",
   "entrypoints": {
