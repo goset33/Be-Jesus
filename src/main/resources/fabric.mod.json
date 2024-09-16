@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "id": "jesus",
   "version": "${version}",
-  "name": "Jesus",
-  "description": "",
+  "name": "Be Jesus",
+  "description": "This mod will make you feel like Jesus.",
   "authors": [
     "goset33"
   ],
   "contact": {
-    "website": "https://www.youtube.com/@goset33",
-    "repo": "https://github.com/goset33/Jesus-mod"
+    "youtube": "https://www.youtube.com/@goset33",
+    "sources": "https://github.com/goset33/Jesus-mod"
   },
   "license": "All-Rights-Reserved",
   "icon": "assets/jesus/icon.png",
@@ -26,7 +26,7 @@
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "fabric-key-binding-api-v1": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": ">=${minecraft_version}"
   },
   "mixins": [
     "jesus.mixins.json"
