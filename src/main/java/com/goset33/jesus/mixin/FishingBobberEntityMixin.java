@@ -26,12 +26,12 @@ public abstract class FishingBobberEntityMixin {
     @Accessor("waitCountdown")
     public abstract void setWaitCountdown(int waitCountdown);
 
-    @Inject(method = "tickFishingLogic(Lnet/minecraft/util/math/BlockPos;)V", at = @At("HEAD"))
+    @Inject(method = "tickFishingLogic", at = @At("HEAD"))
     private void InstantFish(BlockPos pos, CallbackInfo info) {
         setWaitCountdown(1);
     }
 
-    @Inject(method = "use(Lnet/minecraft/item/ItemStack;)I", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;spawnEntity(Lnet/minecraft/entity/Entity;)Z"))
+    @Inject(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;spawnEntity(Lnet/minecraft/entity/Entity;)Z"))
     private void MultiplyDrop(ItemStack usedItem, CallbackInfoReturnable<Integer> info, @Local ItemEntity itemEntity, @Local LocalRef<ItemEntity> localRef, @Local LootContextParameterSet lootContextParameterSet, @Local LootTable lootTable) {
         ItemStack containStack = itemEntity.getStack();
         ArrayList<String> junks = new ArrayList<>(Arrays.asList(

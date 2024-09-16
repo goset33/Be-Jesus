@@ -4,7 +4,7 @@
 Time: 2024-09-15 20:47:55
 Description: Unexpected error
 
-java.lang.RuntimeException: Mixin transformation of com.goset33.jesus.mixin.ZombieVillagerInvoker failed
+java.lang.RuntimeException: Mixin transformation of com.goset33.jesus.mixin.ZombieVillagerEntityMixin failed
 	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:427)
 	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:323)
 	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:218)
@@ -24,7 +24,7 @@ java.lang.RuntimeException: Mixin transformation of com.goset33.jesus.mixin.Zomb
 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
-Caused by: org.spongepowered.asm.mixin.transformer.throwables.IllegalClassLoadError: Illegal classload request for accessor mixin com.goset33.jesus.mixin.ZombieVillagerInvoker. The mixin is missing from jesus.mixins.json which owns package com.goset33.jesus.mixin.* and the mixin has not been applied.
+Caused by: org.spongepowered.asm.mixin.transformer.throwables.IllegalClassLoadError: Illegal classload request for accessor mixin com.goset33.jesus.mixin.ZombieVillagerEntityMixin. The mixin is missing from jesus.mixins.json which owns package com.goset33.jesus.mixin.* and the mixin has not been applied.
 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:334)
 	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:234)
 	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202)

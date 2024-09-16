@@ -30,7 +30,7 @@ public abstract class GlassBottleItemMixin extends Item {
         super(settings);
     }
 
-    @Inject(at = @At("HEAD"), method = "use(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/TypedActionResult;", cancellable = true)
+    @Inject(at = @At("HEAD"), method = "use", cancellable = true)
     private void AddReactionToWine(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> info) {
         ItemStack stack = user.getStackInHand(hand);
         BlockHitResult hitResult = GlassBottleItem.raycast(world, user, RaycastContext.FluidHandling.SOURCE_ONLY);
