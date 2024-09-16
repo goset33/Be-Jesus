@@ -8,7 +8,6 @@
     "goset33"
   ],
   "contact": {
-    "youtube": "https://www.youtube.com/@goset33",
     "sources": "https://github.com/goset33/Jesus-mod"
   },
   "license": "All-Rights-Reserved",
@@ -30,5 +29,10 @@
   },
   "mixins": [
     "jesus.mixins.json"
-  ]
+  ],
+  "modmenu": {
+    "links": {
+      "modmenu.jesus.youtube": "https://www.youtube.com/@goset33"
+    }
+  }
 }
