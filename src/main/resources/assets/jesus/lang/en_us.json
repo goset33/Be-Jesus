@@ -4,5 +4,6 @@
   "item.jesus.wine_bottle": "Wine Bottle",
   "category.jesus.category": "Jesus Abilities",
   "key.jesus.transformation": "Transform Water",
-  "message.transform_impossible": "You should have a water bottle or a water bucket in your hand to do this!"
+  "message.transform_impossible": "You should have a water bottle or a water bucket in your hand to do this!",
+  "message.disconnect" : "The ‘Be Jesus’ mod is only available in singleplayer!"
 }

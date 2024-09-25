@@ -4,5 +4,6 @@
   "item.jesus.wine_bottle": "Бутылочка вина",
   "category.jesus.category": "Способности Иисуса",
   "key.jesus.transformation": "Превращение воды",
-  "message.transform_impossible": "У вас в руке должна быть бутылочка воды или ведро воды чтобы сделать это!"
+  "message.transform_impossible": "У вас в руке должна быть бутылочка воды или ведро воды чтобы сделать это!",
+  "message.disconnect" : "Мод 'Be Jesus' доступен только в одиночной игре!"
 }
