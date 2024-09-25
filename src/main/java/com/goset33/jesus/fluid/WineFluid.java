@@ -7,6 +7,7 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
+import net.minecraft.world.WorldView;
 
 public abstract class WineFluid extends JesusFluids {
     @Override
@@ -45,6 +46,12 @@ public abstract class WineFluid extends JesusFluids {
         public boolean isStill(FluidState fluidState) {
             return false;
         }
+
+        @Override
+        protected int getMaxFlowDistance(WorldView world)
+        {
+            return 8;
+        }
     }
 
     public static class Still extends WineFluid {
@@ -56,6 +63,12 @@ public abstract class WineFluid extends JesusFluids {
         @Override
         public boolean isStill(FluidState fluidState) {
             return true;
+        }
+
+        @Override
+        protected int getMaxFlowDistance(WorldView world)
+        {
+            return 8;
         }
     }
 }

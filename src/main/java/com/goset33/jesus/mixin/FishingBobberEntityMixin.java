@@ -51,7 +51,7 @@ public abstract class FishingBobberEntityMixin {
 
         for (String item : junks) {
             while (containStack.getItem().toString().equals(item)) {
-                lootTable = ((FishingBobberEntity) (Object) this).getWorld().getServer().getLootManager().getLootTable(LootTables.FISHING_GAMEPLAY);
+                lootTable = ((FishingBobberEntity) (Object) this).getWorld().getServer().getReloadableRegistries().getLootTable(LootTables.FISHING_GAMEPLAY);
                 ObjectArrayList<ItemStack> list = lootTable.generateLoot(lootContextParameterSet);
                 for (ItemStack itemStack : list) {
                     containStack = itemStack;

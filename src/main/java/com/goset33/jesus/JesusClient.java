@@ -23,8 +23,8 @@ public class JesusClient implements ClientModInitializer {
                 "category.jesus.category"));
 
         FluidRenderHandlerRegistry.INSTANCE.register(Jesus.STILL_WINE, Jesus.FLOWING_WINE, new SimpleFluidRenderHandler(
-                new Identifier("minecraft:block/water_still"),
-                new Identifier("minecraft:block/water_flow"),
+                Identifier.of("minecraft:block/water_still"),
+                Identifier.of("minecraft:block/water_flow"),
                 0xB11226));
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), Jesus.STILL_WINE, Jesus.FLOWING_WINE);

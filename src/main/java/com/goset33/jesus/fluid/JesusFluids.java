@@ -36,11 +36,6 @@ public abstract class JesusFluids extends FlowableFluid {
     }
 
     @Override
-    protected int getFlowSpeed(WorldView worldView) {
-        return 1;
-    }
-
-    @Override
     protected int getLevelDecreasePerBlock(WorldView worldView) {
         return 1;
     }

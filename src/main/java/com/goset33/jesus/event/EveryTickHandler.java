@@ -11,8 +11,6 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.potion.PotionUtil;
-import net.minecraft.potion.Potions;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Style;
@@ -52,7 +50,8 @@ public class EveryTickHandler implements ClientTickEvents.StartWorldTick, Client
         ItemStack itemStack = player.getMainHandStack();
         ItemStack newWineStack;
 
-        if (itemStack.getItem() == Items.POTION && PotionUtil.getPotion(itemStack) == Potions.WATER) {
+        Jesus.LOGGER.info("3");
+        if (itemStack.getItem() == Items.POTION) { // Реагирует на все зелья + вино не коллайдит и просто существует
             newWineStack = new ItemStack(Jesus.WINE_BOTTLE);
         } else if (itemStack.getItem() == Items.WATER_BUCKET) {
             newWineStack = new ItemStack(Jesus.STILL_WINE.getBucketItem());
