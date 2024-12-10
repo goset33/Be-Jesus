@@ -1,7 +1,5 @@
 ## What is this?
 
-This mod was created specifically for a video on the YouTube channel **https://www.youtube.com/@goset33**
-
 The mod makes you feel like Jesus in the world of Minecraft.
 
 ## What does this mod add?
